@@ -79,5 +79,6 @@ jobs:
           exit-code: '1' # Fail the job if vulnerabilities are found
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
+          skip-update: true
         env:
           TRIVY_DISABLE_VEX_NOTICE: true
