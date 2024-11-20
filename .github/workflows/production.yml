@@ -64,7 +64,7 @@ jobs:
           cache-to: type=inline,mode=max
           
       - name: Scan the Docker image
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@use-pinned-version
         with:
           image-ref: 'adrianaska0/qr_code_api:${{ github.sha }}'
           format: 'table'
@@ -72,3 +72,4 @@ jobs:
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
           trivyignores: '.trivyignore'
+        
